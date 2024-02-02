@@ -36,7 +36,6 @@ const MobileNavbar: React.FC = () => {
       >
         <ul className='flex flex-col gap-10 text-jada-purple'>
           {menuItems.map((item) => (
-            // The `key` prop should be here, on the outermost element returned by the map
             <li key={item.href} onClick={closeMenu}>
               <MenuItem href={item.href} label={item.label} />
             </li>
