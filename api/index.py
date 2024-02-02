@@ -50,7 +50,9 @@ def get_csrf_token():
 def hello_world():
     print('hello inside hello route  ==================>')
     return {"hello" : "Hello, World!"}
-
+@app.route('/api/hello', methods=['GET'])
+def healthchecker():
+    return {"status": "success","message": "Connection to NextJs and Flask working"}
 
 if __name__ == '__main__':
     app.run(port=5000)
